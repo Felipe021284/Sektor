@@ -1,165 +1,289 @@
-﻿<!DOCTYPE html>
-
+<!DOCTYPE html>
+<!--creado por Felipe Jiménez-->
 <html>
-    
-<head>
-        
-<title>FEBRERO </title>
-        
-<meta charset="UTF-8">
-        
-<meta http-equiv="X-UA-Compatible"content="IE=edge">
-
+    <head>
+        <title>SERVICIOS</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Mukta:wght@800&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 
+/* COLOR DE FONDO ANIMADO*/
 
-/*cuerpo*/
 
-* 
-{
-        margin: 0;
-    
-    padding:0;
-    
+:root {
+  --gradient: linear-gradient(-45deg,white, red,black,red,white );
+}
+    /*cuerpo*/
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    
-    font-family: 'Baloo 2', cursive;
-
-    }
-
-
-body 
-{
-    
-    display: flex;
-    
-    align-items: center;
-    
-    justify-content: center;
-    
-    min-height: 100vh;
-    
-    
-    flex-wrap: wrap;
-    
- 
-    background-repeat: repeat;
- 
-    background-image:url('https://i.ibb.co/JzdkvNg/666.jpg');
-    background-size: 10%;
- 
-    
+   font-family: 'Baloo 2';
 }
 
-/*contenedor principal*/
-
-.card 
-{
-   
-   
-    position: relative;
-    
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     
-    height: 100%;
-    min-height: 52vh;
-    
-    text-align: center ;
+    min-height: 100vh;
+        background-image:url('https://i.ibb.co/JzdkvNg/666.jpg');
+    background-size: 10%; 
+ 
+/*  background:black;*/
+    flex-wrap: wrap;
+}
+/*contenedor principal*/
+.card {
 
-    border: 1px solid red;
+border: 1px solid red;
    
     Background-color:BLACK;
    
-   box-shadow:red -10px 10px 30px,red 10px -10px 30px ;
- 
-
-border-radius: 10px;
-    
-overflow: hidden;
-    transition: .5s;
-    
-margin: 15px 15px;
-}
+    box-shadow:red -10px 10px 30px,red 10px -10px 30px ;
 
 
-/*
-.card:hover {
-   
- box-shadow: 0 5px 10px rgba(0,0,0,1);
-    
-transform: translateY(-20px);
-}*/
-
-
-/*contenedor de imágen*/
-
-.card .head {
-    
-    height: 100%;
-    
-    width: 100%;
-    
     position: relative;
+    width: 400px;
+  /*  height: 900px;*/
+    border-radius: 5px;
+    overflow: hidden;
+    transition: .5s;
+    margin: 15px 20px;
+    min-height: 100%;
+  background-size: 300%;
+  background-image: var(--gradient);
+  -webkit-animation: bg-animation 30s infinite;
+          animation: bg-animation 30s infinite;
+}
+
+@-webkit-keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+
+
+}
+
+.card:hover {
+    box-shadow: 0 5px 10px rgba(0,0,0,1);
+    transform: translateY(-20px);
 }
 
 
+.text-animation 
+{
+        position:relative ;
+    
+    left:px;
+    top:px ;
+    
+    width:;
+    
+    margin: 0 auto;
+    
+    border-right: 2px solid aqua;
+    
+    font-size: 60px;
+    Color:white;
+    
+    text-shadow:red -2px 3px ;
+    
+    text-align: center ;
+    
+    white-space: nowrap ;
+    
+    overflow: hidden ; 
+    
+  /*  transform: translateY (-50%);*/
+        animation:typewriter 5s steps(50)infinite,
+    
+    blinkTextCursor 500ms steps(40)     infinite normal;
+}
+
+ 
+@keyframes typewriter 
+{
+    from 
+{
+        width: 0;
+    }
+    
+to {
+        width:300px ;
+    }
+}
+
+@keyframes blinkTextCursor 
+{
+    from {
+        border-right-color:red;
+    }
+    
+to {
+        border-right-color: transparent ;
+    }
+}
 
 
-
-
-/* apartado texto animado*/
-
-
-
-
-
-
-
-
-.center 
-{    
-text-align: center 
-    ;
-font-family: "Consolas", monospace;
-   
-     font-size: 110px;
-    color:WHITE;
-   text-shadow: -5PX 3PX;
-    padding: 300px 0
+/*contenedor del texto*/
+.card .description {
+width: 100%;
+  /*  height: 200px;*/
+    
+ 
     text-align: center;
 }
+
+
+H2{
+    animation: animate 20s infinite linear;
+    text-shadow: -1px 1px white;
+    
+}
+
+
+@keyframes animate
+
+{
+
+    0%,100%{
+
+        color: white;
+
+    }
+
+    25%{
+
+        color: deeppink;
+
+    }
+
+    50%{
+
+        color:deepskyblue;
+
+    }
+
+    75%{
+
+        color: black;
+
+    }
+
+}
+
+
+
+
+/*MENU DE ENLACES*/
+
+ .menu li{
+  display: inline-block;
+  text-align:center; 
+  Position:center; 
+}
+
+.menu li a{
+  display: flex;
+  flex-direction:column;
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  padding: 10px;
+  width: 200px;
+  height: 100px;
+  
+  
+  font-size: 30px;
+  border-radius: 100px;
+  border: 1px white solid;
+  
+    box-shadow:0px 0px 10px 5px white;
+                  0px 0px 10px 5px purple;
+                  
+                  
+                  
+         Margin:10px 0px;   }
+         
+         
+div.shape {
+position: relative;
+Left:140px;
+    width: 60px;
+    height: 50px;
+    font-size:30px;
+    Align-items:center;
+    -webkit-animation-name: shape;   
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: shape;   
+    animation-duration: 2s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes shape {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes shape {
+     
+    0%{ transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+} 
 
 .GUARDIAS
 { 
  
- position:relative ;
+ position:relative;
  
 /* text-align: center*/
     
-   left:16%;
-    top:20px ;
+   
+    top:1px ;
 
 background:BLACK;
  
 float:left;
-border:1px RED SOLID;
-box-shadow:red -1px 1px 5px,red 1px -1px 5px ;
+border:1px white SOLID;
+box-shadow:white -1px 1px 5px,white 1px -1px 5px ;
  
 text-shadow: red -2PX 1PX 1PX;
  
 
-BORDER-RADIUS: 5PX;
+BORDER-RADIUS: 100PX;
 WIDTH:200px;
 padding:5px;
 
-margin: 10px;
+margin: 10px 19%;
 
 
 
@@ -179,9 +303,6 @@ A{
 COLOR:WHITE;
 TEXT-DECORATION:NONE;
 }
-
-
-
 
 
 
@@ -215,7 +336,7 @@ th {
 td {
 background-color: #fff;
 opacity: 0.8;
-  font-size: 9.5px;
+  font-size: 10px;
 }
 
 table tr:nth-child(even) {
@@ -224,52 +345,73 @@ table tr:nth-child(even) {
   
 /* background-image:url('https://i.ibb.co/JzdkvNg/666.jpg');*/
   
-}
+.calendario {
 
-.calendario
-{ 
- 
- position:relative ;
- 
-/* text-align: center*/
+position: absolute;
 
-    
-   left:7%;
-    top:20px ;
+left: 0%;
 
-background:BLACK;
- 
-float:left;
-border:1px red SOLID;
-box-shadow:red -1px 1px 5px,red 1px -1px 5px ;
- 
-/*text-shadow: blue -2PX 2PX 1PX;*/
- 
+top: 1px;
 
-BORDER-RADIUS: 5PX;
-WIDTH:275px;
-padding:5px;
+background: black;
+
+float: left;
+
+border: 1px red solid;
+
+box-shadow: red 1px 1px 5px,
+
+red 1px 1px 5px;
+
+border-radius: 5px;
+
+width: 300px;
+
+max-height: 500px;
+
+padding: 0px;
 
 margin: 1px;
 
+overflow-x: auto;
+
+overflow-y: auto;
+
+word-break: break-all;
+
+}
+
+
+ 
 
 
 
-
-
-
-   
 </style>
-
-
-</head>
+    </head>
+    <body >
+    <div 
     
-<body>
-    
-<div class="card">
-        
-<div class="head">
+    class="card">
+        <div class="head">
+            <div class="circle"></div>
+            <!--div class="img">
+                <img src="
+                " alt="tu foto aqui">
+            </div-->
+        </div>
             
+        
+        <div class="description">
+            <!--h2 class="text-animation">COMO COMENZAR EN JAVASCRIPT
+                
+            </h2-->
+            <h2 class="text-animation">FEBRERO</h2>
+            
+            <div class="loader"
+    >
+        <ul class="menu">
+    <li>
+      
 <div class="calendario"
 >
 
@@ -343,28 +485,221 @@ margin: 1px;
               
         
 </div>
+            
+         
 
-<div class="GUARDIAS"
->
+
+      
+   </li>
+   
+   <div class="GUARDIAS">
 
  <a href="index">INICIO</a>
               
         
 </div>
-
-
-
-              
-            
-        
-</div>
-        
-        
-        
-   
- </div>
-        
     
-</body>
-
+    <!--li>
+    <a href="TEMA 14">DECLARACIONES SWITCH</a>
+    </li>
+    
+    <li>
+    <a href="TEMA 15">OPERADOR TENARIO</a>
+    </li>
+    
+    <!--li>
+    <a href="TEMA 6">6</a>
+    </li>
+    
+    <li>
+    <a href="TEMA 7"> 7</a>
+    </li>
+    
+    <li>
+    <a href="TEMA 8"> 8</a>
+    </li>
+    
+    <li>
+    <a href="TEMA 9"> 9</a>
+    </li>
+    
+    <li>
+    <a href="TEMA 10"> 10</a>
+    </li>
+    
+    <li>
+    <a href="TEMA 11">11</a>
+    </li>
+    
+<li>
+    <a href="TEMA 12">12</a>
+    </li>
+    
+<li>
+    <a href="TEMA 13"> 13</a>
+    </li>
+    
+    <li>
+    <a href="TEMA 14">14</a>
+    </li>
+    
+<li>
+    <a href="TEMA 15">15</a>
+    </li>
+    
+    <li>
+    <a href="TEMA 16"> 16</a>
+    </li>
+    
+    <li>
+    <a href="TEMA 17"> 17
+        
+    </a>
+    </li>
+    
+    <li>
+    <a href="TEMA 18"> 18
+        
+    </a>
+    </li>
+    
+     <li>
+    <a href="TEMA 19"> 19
+        
+    </a>
+    </li>
+    
+     <li>
+    <a href="TEMA 20"> 20
+        
+    </a>
+    </li>
+    
+     <li>
+    <a href="TEMA 21"> 21
+        
+    </a>
+    </li>
+    
+    
+     <li>
+    <a href="TEMA 22"> 22
+        
+    </a>
+    </li>
+    
+     <li>
+    <a href="TEMA 23"> 23
+        
+    </a>
+    </li>
+     <li>
+    <a href="TEMA 24"> 24
+        
+    </a>
+    </li>
+    
+     <li>
+    <a href="TEMA 25"> 25
+        
+    </a>
+    </li>
+    
+    <li>
+    <a href="TEMA 26"> 26
+        
+    </a>
+    </li>
+    
+    
+     <li>
+    <a href="TEMA 27"> 27
+        
+    </a>
+    </li>
+    
+     <li>
+    <a href="TEMA 28"> 28
+        
+    </a>
+    </li>
+     <li>
+    <a href="TEMA 29"> 29
+        
+    </a>
+    </li>
+    
+     <li>
+    <a href="TEMA 30"> 30
+        
+    </a>
+    </li>
+    
+    <!--li>
+    <a href="TEMA 31"> 31
+        
+    </a>
+    </li>
+    
+    
+     <li>
+    <a href="TEMA 32"> 32
+        
+    </a>
+    </li>
+    
+     <li>
+    <a href="TEMA 33"> 33
+        
+    </a>
+    </li>
+     <li>
+    <a href="TEMA 34"> 34
+        
+    </a>
+    </li>
+    
+     <li>
+    <a href="TEMA 35"> 35
+        
+    </a>
+    </li>
+    
+    <li>
+    <a href="TEMA 36"> 36
+        
+    </a>
+    </li>
+    
+    
+     <li>
+    <a href="TEMA 37"> 37
+        
+    </a>
+    </li>
+    
+     <li>
+    <a href="TEMA 38"> 38
+        
+    </a>
+    </li>
+     <li>
+    <a href="TEMA 39"> 39
+        
+    </a>
+    </li>
+    
+     <li>
+    <a href="TEMA 40"> 40
+        
+    </a>
+    </li-->
+    
+    
+    </ul>
+    </div>
+        </div>     
+    </div>
+        
+    </body>
 </html>
