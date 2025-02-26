@@ -149,11 +149,22 @@ width: 100%;
     text-align: center;
 }
 
+H1{
+    font-size: 60px;
+}
 
-H2,A{
+H2{
+    font-size: 40px;
+}
+
+A{
+    font-size: 30px;
+}
+
+H1,H2,A{
     animation: animate 20s infinite linear;
     text-shadow: -1px 1px white;
-    font-size: 50px;
+    
 }
 
 
@@ -209,7 +220,7 @@ H2,A{
   height: 50px;
   
   
-  font-size: 30px;
+ /* font-size: 30px;*/
   border-radius: 100px;
   border: 1px white solid;
   
@@ -324,6 +335,3 @@ word-break: break-all;
 
 
  
-
-
-
