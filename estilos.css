@@ -1,5 +1,3 @@
-
-
 /* COLOR DE FONDO ANIMADO*/
 
 
@@ -83,63 +81,6 @@ border: 1px solid red;
     transform: translateY(-20px);
 }
 
-/*
-
-.text-animation 
-{
-        position:relative ;
-    
-    left:px;
-    top:px ;
-    
-    width:;
-    
-    margin: 0 auto;
-    
-    border-right: 2px solid aqua;
-    
-    font-size: 60px;
-    Color:white;
-    
-    text-shadow:red -2px 3px ;
-    
-    text-align: center ;
-    
-    white-space: nowrap ;
-    
-    overflow: hidden ; 
-    
-  /*  transform: translateY (-50%);
-        animation:typewriter 5s steps(50)infinite,
-    
-    blinkTextCursor 500ms steps(40)     infinite normal;
-}
-
- 
-@keyframes typewriter 
-{
-    from 
-{
-        width: 0;
-    }
-    
-to {
-        width:300px ;
-    }
-}
-
-@keyframes blinkTextCursor 
-{
-    from {
-        border-right-color:red;
-    }
-    
-to {
-        border-right-color: transparent ;
-    }
-}
-*/
-
 /*contenedor del texto*/
 .card .description {
 width: 100%;
@@ -154,7 +95,7 @@ H1{
 }
 
 H2{
-    font-size: 40px;
+    font-size: 29px;
 }
 
 A{
