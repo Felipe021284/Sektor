@@ -6,7 +6,7 @@
       const testimonials = [
         {
           
-          image: "https://i.ibb.co/27Gm3rh9/codigo-programacion-neon-295303-7230.jpg",
+          image: "https://i.ibb.co/Qj961PKD/enero-1.jpg",
           testimonial:
             "<h3>ENERO</h3>",
         },
