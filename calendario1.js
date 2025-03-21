@@ -6,7 +6,7 @@
       const testimonials = [
         {
           
-          image: "",
+          image: "https://i.ibb.co/MxgLxh18/IMG-20250320-230548.jpg",
           testimonial:
             "<h3>ENERO</h3>",
         },
