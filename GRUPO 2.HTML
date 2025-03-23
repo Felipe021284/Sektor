@@ -6,94 +6,72 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible"content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+        
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Mukta:wght@800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
 
 <link rel="stylesheet"type="text/css"
-href="estilos.css">
+href="estilos3.css">
 
     </head>
-    <body >
-    <div 
-    
-    class="card">
-        <div class="head">
-            <div class="circle"></div>
-            
+    <body>
+     
+    <div class="card">
+        
+         <h1 class="text-animation"><br /> GRUPO 2</h1>
+         <h2 class="text-animation">
+          FELIPE DE JESUS JIMENEZ MARTINEZ <br />
+
+ENRIQUE ZAMORA RESENDIZ<br />
+ 
+        <div class="description">
+           <div class="uno">
+            <button id="prev" onclick="prev()">&lt;</button>
+        
+        </div>
+        
+        <div class="dos">
+        
+        <button id="next" onclick="next()">&gt;</button>
         </div>
             
+        </div>
         
-        <div class="description">
-        <h1>
-            GRUPO 2
-        </h1>
-            <h2 class="text-animation">
-        FELIPE DE JESUS JIMENEZ MARTINEZ <br /> 7575 <br />
-ENRIQUE <br /> ZAMORA RESENDIZ <br /> 8738
-      </h2>
-            
-            
-            <div class="loader"
-    >
-        <ul class="menu">
-    <li>
-      <a href="ENERO2.HTML"> ENERO</a>
-   </li>
-    <li>
-      <a href="FEBRERO2.HTML"> FEBRERO</a>
-    </li>
-     <li>
-      <a href="MARZO2.HTML"> MARZO</a>
-    </li>
-    <li>
-    <a href="ABRIL2.HTML">ABRIL </a>
-    </li>
-    
-    <li>
-    <a href="MAYO2.HTML">MAYO</a>
-    </li>
-    
-    <li>
-    <a href="JUNIO2.HTML">JUNIO</a>
-    </li>
-    
-    <li>
-    <a href="JULIO2.HTML"> JULIO</a>
-    </li>
-    
-    <li>
-    <a href="AGOSTO2.HTML"> AGOSTO</a>
-    </li>
-    
-    <li>
-    <a href="SEPTIEMBRE2.HTML"> SEPTIEMBRE</a>
-    </li>
-    
-    <li>
-    <a href="OCTUBRE2.HTML"> OCTUBRE</a>
-    </li>
-    
-    <li>
-    <a href="NOVIEMBRE2.HTML">NOVIEMBRE</a>
-    </li>
-    
-<li>
-    <a href="DICIEMBRE2.HTML">DICIEMBRE</a>
-    </li>
-    
-<li>
-    <a href="index">INICIO</a>
-    </li>
-    
-    
-    
-    </ul>
-    </div>
-        </div>     
-    </div>
+        <!-- inicio del slider -->
+        <div id="loader"></div>
+    <div id="box">
+      <div class="img-con">
         
-    </body>
-</html>
+      </div>
+      <div class="wrapper">
+        <div class="testimonial-container" id="testimonial-container">
+          <div id="testimonial1" class="active">
+            <img src="" />
+          </div>
+        </div>
+        
+      </div>
+      <script
+
+src="calendario2.js"></script>
+
+
+  <div style="position: fixed;
+
+bottom: 0; left: 50%;
+
+transform: translateX(-50%);
+
+text-align: center;">
+
+<a href="index.html">INICIO</a>
+
+</div>
+  </body>
+    </html>
+        
