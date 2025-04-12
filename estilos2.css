@@ -69,10 +69,15 @@ animation: animate 10s infinite linear;
 }
 
 .uno{
-    text-align: center;
-   position: relative;
-   top:70px;
-   left:110px;
+
+position: fixed;
+
+bottom: 100px; left: 50%;
+
+transform: translateX(-50%);
+
+
+  
 }
 
 a{
