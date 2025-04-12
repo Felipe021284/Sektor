@@ -2,8 +2,7 @@
 <!--creado por Felipe Jiménez-->
 <html>
     <head>
-        <title>PROLOGIS</title>
-        <meta charset="UTF-8">
+    <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible"content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
@@ -18,60 +17,114 @@
 <link rel="stylesheet"type="text/css"
 href="estilos2.css">
 
+    <style>
+    
+    
+    </style>
+        <title>PROLOGIS</title>
     </head>
     <body>
-     
-    <div class="card">
+   
+    
+        <div class="slider-container">
         
-         <h1 class="text-animation"> <br /><br />PROLOGIS </h1>
+        <div class="card">
+        
+         <h1 class="text-animation"><br /> SERVICIOS</h1>
          
+ </div>
  
-        <div class="description">
-        <div class="botones">
-           <div class="uno">
-            <button id="prev" onclick="prev()">&lt;</button>
-        
-        </div>
-        
-        <div class="dos">
-        
-        <button id="next" onclick="next()">&gt;</button>
-        </div>
-        </div>
-            
-        </div>
-        
-        <!-- inicio del slider -->
-        <div id="loader"></div>
-    <div id="box">
-      <div class="img-con">
-        
-      </div>
-      <div class="wrapper">
-        <div class="testimonial-container" id="testimonial-container">
-          <div id="testimonial1" class="active">
-            <img src="" />
-          </div>
-        </div>
-        
-      </div>
-      <script
-
-src="prologis.js"></script>
-
-
-
-  <div style="position: fixed;
-
-bottom: 0; left: 50%;
-
-transform: translateX(-50%);
-
-text-align: center;">
-
-<a class="enlace" href="index.html">INICIO</a>
-
+  <div class="slider">
+  
+    <div class="slider-item active">
+    
+    <a href="https://felipe021284.github.io/Sektor/PERISUR.HTML
+    ">PERISUR</a>
+    
+    </div>
+    <div class="slider-item">
+    
+    
+    <a href="https://felipe021284.github.io/Sektor/ARRAYANES.HTML
+    ">ARRAYANES</a>
+    
+    </div>
+   
+    <div class="slider-item">
+    
+      <a href="https://felipe021284.github.io/Sektor/LOS ALTOS.HTML
+    ">LOS ALTOS</a>
 </div>
-  </body>
-    </html>
-        
+
+ <div class="slider-item">
+    
+      <a href="https://felipe021284.github.io/Sektor/ITESO.HTML
+    ">ITESO</a>
+</div>
+
+
+
+
+
+    <!-- Agrega más imágenes aquí -->
+  </div>
+  
+  <div class="uno">
+  <a href="index.html">INICIO</a>
+  </div>
+  
+  
+</div>
+
+<script
+
+src="servicios.js"></script>
+
+<script>
+
+
+const slider = document.querySelector('.slider');
+const sliderItems = document.querySelectorAll('.slider-item');
+const prevButton = document.querySelector('.prev-button');
+const nextButton = document.querySelector('.next-button');
+
+let currentIndex = 0;
+let isDragging = false;
+let startX = 0;
+
+slider.addEventListener('touchstart', (e) => {
+  isDragging = true;
+  startX = e.touches[0].clientX;
+});
+
+slider.addEventListener('touchmove', (e) => {
+  if (isDragging) {
+    const currentX = e.touches[0].clientX;
+    const diffX = currentX - startX;
+    slider.style.transform = `translateX(${diffX}px)`;
+  }
+});
+
+slider.addEventListener('touchend', (e) => {
+  isDragging = false;
+  const currentX = e.changedTouches[0].clientX;
+  const diffX = currentX - startX;
+  if (diffX < -100) {
+    currentIndex++;
+    if (currentIndex >= sliderItems.length) {
+      currentIndex = 0;
+    }
+  } else if (diffX > 100) {
+    currentIndex--;
+    if (currentIndex < 0) {
+      currentIndex = sliderItems.length - 1;
+    }
+  }
+  slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+});
+
+
+    
+</script>
+    </body>
+</html>
