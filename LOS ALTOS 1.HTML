@@ -2,8 +2,7 @@
 <!--creado por Felipe Jiménez-->
 <html>
     <head>
-        <title>GRUPO 1</title>
-        <meta charset="UTF-8">
+    <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible"content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
@@ -18,60 +17,177 @@
 <link rel="stylesheet"type="text/css"
 href="estilos3.css">
 
+    <style>
+
+    </style>
+        <title>GRUPO 1</title>
     </head>
     <body>
-     
-    <div class="card">
+    <!--a href="index.html">INICIO</a-->
+    
+        <div class="slider-container">
+        
+        <div class="card">
         
          <h1 class="text-animation"><br /> GRUPO 1</h1>
          <h2 class="text-animation">
           GENOVEVA SERRANO <br />
 
 MARTIN RANGEL<br />ALFONSO GARCIA
+ </div>
  
-        <div class="description">
-           <div class="uno">
-            <button id="prev" onclick="prev()">&lt;</button>
-        
-        </div>
-        
-        <div class="dos">
-        
-        <button id="next" onclick="next()">&gt;</button>
-        </div>
-            
-        </div>
-        
-        <!-- inicio del slider -->
-        <div id="loader"></div>
-    <div id="box">
-      <div class="img-con">
-        
-      </div>
-      <div class="wrapper">
-        <div class="testimonial-container" id="testimonial-container">
-          <div id="testimonial1" class="active">
-            <img src="" />
-          </div>
-        </div>
-        
-      </div>
-      <script
-
-src="calendario1.js"></script>
-
-
-  <div style="position: fixed;
-
-bottom: 0; left: 50%;
-
-transform: translateX(-50%);
-
-text-align: center;">
-
-<a href="index.html">INICIO</a>
-
+  <div class="slider">
+  
+    <div class="slider-item active">
+    
+    <img src="https://i.ibb.co/MxgLxh18/IMG-20250320-230548.jpg
+    ">
+    
+    </div>
+    <div class="slider-item">
+    
+    <img src="https://i.ibb.co/4nbyqG46/IMG-20250307-060842.jpg
+    ">
+    
+    
+    </div>
+   
+    <div class="slider-item">
+    
+      <img src="https://i.ibb.co/G6sDRkQ/marzo.jpg
+      ">
 </div>
-  </body>
-    </html>
-        
+
+<div class="slider-item">
+    
+      <img src="https://i.ibb.co/r251W0Lr/abril.jpg
+      ">
+</div>
+
+<div class="slider-item">
+    
+      <img src="https://i.ibb.co/TB4s4Mfj/IMG-20250309-144922.jpg
+      ">
+</div>
+
+<div class="slider-item">
+    
+      <img src="https://i.ibb.co/JFp2GG93/JUNIO-1.jpg" >
+</div>
+
+
+<div class="slider-item">
+    
+      <img src="https://i.ibb.co/twbqP1XB/julio-1.jpg
+      ">
+</div>
+
+<div class="slider-item">
+    
+      <img src="https://i.ibb.co/kVVbRsT0/agosto-1.jpg">
+</div>
+
+<div class="slider-item">
+    
+      <img src="https://i.ibb.co/8g0Ck2Sx/septiembre-1.jpg">
+</div>
+
+<div class="slider-item">
+    
+      <img src="https://i.ibb.co/6cH5XDDj/octubre-1.jpg">
+</div>
+
+
+<div class="slider-item">
+    
+      <img src="https://i.ibb.co/VY0QzNqd/noviembre-1.jpg">
+</div>
+
+<div class="slider-item">
+    
+      <img src="https://i.ibb.co/Xr8GhGfb/diciembre-1.jpg">
+</div>
+
+    <!-- Agrega más imágenes aquí -->
+  </div>
+  
+   <div class="uno">
+  <a href="index.html">INICIO</a>
+  </div>
+  
+  
+  
+  
+</div>
+
+<script
+
+src="servicios.js"></script>
+
+<script>
+
+
+
+
+const slider = document.querySelector('.slider');
+const sliderItems = document.querySelectorAll('.slider-item');
+const prevButton = document.querySelector('.prev-button');
+const nextButton = document.querySelector('.next-button');
+
+let currentIndex = 0;
+let isDragging = false;
+let startX = 0;
+
+slider.addEventListener('touchstart', (e) => {
+  isDragging = true;
+  startX = e.touches[0].clientX;
+});
+
+slider.addEventListener('touchmove', (e) => {
+  if (isDragging) {
+    const currentX = e.touches[0].clientX;
+    const diffX = currentX - startX;
+    slider.style.transform = `translateX(${diffX}px)`;
+  }
+});
+
+slider.addEventListener('touchend', (e) => {
+  isDragging = false;
+  const currentX = e.changedTouches[0].clientX;
+  const diffX = currentX - startX;
+  if (diffX < -100) {
+    currentIndex++;
+    if (currentIndex >= sliderItems.length) {
+      currentIndex = 0;
+    }
+  } else if (diffX > 100) {
+    currentIndex--;
+    if (currentIndex < 0) {
+      currentIndex = sliderItems.length - 1;
+    }
+  }
+  slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+});
+
+/*
+prevButton.addEventListener('click', () => {
+  currentIndex--;
+  if (currentIndex < 0) {
+    currentIndex = sliderItems.length - 1;
+  }
+  slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+});
+
+nextButton.addEventListener('click', () => {
+  currentIndex++;
+  if (currentIndex >= sliderItems.length) {
+    currentIndex = 0;
+  }
+  slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+});
+*/
+
+    
+</script>
+    </body>
+</html>
