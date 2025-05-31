@@ -37,3 +37,21 @@ slider.addEventListener('touchend', (e) => {
   }
   slider.style.transform = `translateX(-${currentIndex * 100}%)`;
 });
+
+/*
+prevButton.addEventListener('click', () => {
+  currentIndex--;
+  if (currentIndex < 0) {
+    currentIndex = sliderItems.length - 1;
+  }
+  slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+});
+
+nextButton.addEventListener('click', () => {
+  currentIndex++;
+  if (currentIndex >= sliderItems.length) {
+    currentIndex = 0;
+  }
+  slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+});
+*/
