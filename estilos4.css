@@ -73,12 +73,10 @@ animation: animate 10s infinite linear;
 }
 
 .uno{
+position: relative;
+top:-370px;
+left:100px;
 
-position: fixed;
-
-bottom: 240px; left: 50%;
-
-transform: translateX(-50%);
 
 
   
@@ -86,8 +84,8 @@ transform: translateX(-50%);
 
 a{
    text-align: center;
-   position: relative;
-   top:-80px;
+   
+   bottom :80px;
 
     font-size: 30px;
         
